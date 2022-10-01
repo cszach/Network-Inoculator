@@ -107,18 +107,22 @@ class NetworkGraphCanvas extends JPanel
     int halfWidth = this.getWidth() / 2;
     int halfHeight = this.getHeight() / 2;
 
-    Vertex v = this.forceDirectedSimulator.vertices[node];
-    int x = (int) v.position.x;
-    int y = (int) v.position.y;
+    // Force-directed layout
+
+    // Vertex v = this.forceDirectedSimulator.vertices[node];
+    // int x = (int) v.position.x;
+    // int y = (int) v.position.y;
 
     // x = r * cosθ
     // y = r *sinθ
     // θ = (2π / n) * i
 
-    // int i = node - 1;
-    // double angle = (Math.PI * 2 / (this.network.data.length - 1)) * i;
-    // int x = (int) (r * Math.cos(angle));
-    // int y = (int) (r * Math.sin(angle));
+    // Uncomment for circular layout
+
+    int i = node - 1;
+    double angle = (Math.PI * 2 / (this.network.data.length - 1)) * i;
+    int x = (int) (r * Math.cos(angle));
+    int y = (int) (r * Math.sin(angle));
 
     // return new Point(
     //   (int) (this.zoom * (halfWidth + x + this.offsetX)),

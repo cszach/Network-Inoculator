@@ -67,13 +67,16 @@ Structure
   including methods to dis/connect nodes, mark nodes as un/visited, get
   connected nodes, get shortest paths to every node from a node using Dijkstra's
   algorithm, get the degree/collective influence of a node, isolate a node, and
-  inoculate the network.
+  inoculate the network;
 - `NetworkGraphCanvas.java`: extends `JPanel` to mainly implement the paint
-  method used to illustrate the network graph in a circular layout.
+  method used to illustrate the network graph in a circular layout;
 - `StopContagion.java`: acts as the main piece of the program that takes
   everything together, including setting up a window frame and the buttons,
   reading input from file, and initializing a network graph and a network graph
-  canvas.
+  canvas;
+- `ForceDirected.java`: treats vertices as particles and simulates interactions
+  using repulsive and attractive forces to compute a visually appealing
+  graphical layout for the graph (Fruchterman-Reingold) (experimental);
 - `test1.txt`, `test2.txt`: example tests.
 
 Algorithm
